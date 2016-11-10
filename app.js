@@ -1,18 +1,20 @@
 (function (){
 	var app = {
 
-		red: null,
-		green: null,
-		blue: null,
+		red: 0,
+		green: 0,
+		blue: 0,
+		alpha: 0,
 
 		init: function(){
 			this.listener();
 		},
 
 		listener: function(){
-			$("#red").on("input", this.inputRed.bind(this));
+			$("input").on("input", this.inputRed.bind(this));
 			$("#green").on("input", this.inputGreen.bind(this));
 			$("#blue").on("input", this.inputBlue.bind(this));
+			$("#alpha").on("input", this.inputAlpha.bind(this));
 		},
 
 		inputRed: function(){
@@ -33,8 +35,14 @@
 			this.bodyColor();
 		},
 
+		inputAlpha: function(){
+			this.alpha = $("#alpha").val();
+			$("#textAlpha").text(this.alpha);
+			this.bodyColor();
+		},
+
 		bodyColor: function(){
-			$("body").css("background-color", "rgb("+app.red+","+app.green+","+app.blue+")");
+			$("body").css("background-color", "rgb("+app.red+", "+app.green+", "+app.blue+", "+app.alpha+")");
 		}
 	}
 
