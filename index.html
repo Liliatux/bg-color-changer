@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<link rel="stylesheet" href="style.css">
+	<meta charset="UTF-8">
+	<title>bg-color-changer</title>
+</head>
+<body>
+	<div class="range">
+		<label for="red"></label>
+		<input type="range" id="red" name="red" min="0" max="255" value="0"><span>255 R</span>
+		<br>
+		<label for="green"></label>
+		<input type="range" id="green" name="green" min="0" max="255" value="0"><span>255 G</span>
+		<br>
+		<label for="blue"></label>
+		<input type="range" id="blue" name="blue" min="0" max="255" value="0"><span>255 B</span>
+		<br>
+		<label for="trans"></label>
+		<input type="range" id="trans" name="transparant"><span>1 a</span>
+	</div>
+
+	<script src="node_modules/jquery/dist/jquery.min.js"></script>
+	<script src="app.js"></script>
+</body>
+</html>
