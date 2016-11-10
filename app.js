@@ -1,25 +1,40 @@
 (function (){
 	var app = {
 
-		red: $("#red").val(),
-		green: $("#green").val(),
-		blue: $("#blue").val(),
+		red: null,
+		green: null,
+		blue: null,
 
 		init: function(){
 			this.listener();
 		},
 
 		listener: function(){
-			$("#red").on("input", this.valInput);
+			$("#red").on("input", this.inputRed.bind(this));
+			$("#green").on("input", this.inputGreen.bind(this));
+			$("#blue").on("input", this.inputBlue.bind(this));
 		},
 
-		valInput: function(){
-			var val = $(this).val();
-			$("label").text(val);
+		inputRed: function(){
+			this.red = $("#red").val();
+			$("#textRed").text(this.red);
+			this.bodyColor();
+		},
+
+		inputGreen: function(){
+			this.green = $("#green").val();
+			$("#textGreen").text(this.green);
+			this.bodyColor();
+		},
+
+		inputBlue: function(){
+			this.blue = $("#blue").val();
+			$("#textBlue").text(this.blue);
+			this.bodyColor();
 		},
 
 		bodyColor: function(){
-			$("body").css("background", "rgb("+app.red+","+app.green+","+app.blue+")");
+			$("body").css("background-color", "rgb("+app.red+","+app.green+","+app.blue+")");
 		}
 	}
 
