@@ -43,13 +43,17 @@
 			this.bodyColor();
 		},
 
+		//Changement de la couleur background en rgba selon les inputs range
 		bodyColor: function(){
 			$("body").css("background-color", "rgba("+app.red+", "+app.green+", "+app.blue+", "+app.alpha+")");
-			$("#hexa").text(this.hexaColor.bind(this));
+			this.hexaColor();
 		},
 
+		//Affichage hexadecimal en fonction des inputs range
 		hexaColor: function(){
-		    return "#" + ((1 << 24) + (app.red << 16) + (app.green << 8) + (app.blue << 0)).toString(16).slice(1);
+			$("#hexa").text(function(){
+		    	return "#" + ((1 << 24) + (app.red << 16) + (app.green << 8) + (app.blue << 0)).toString(16).slice(1);
+			});
 		}
 	}
 
