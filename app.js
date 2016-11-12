@@ -4,14 +4,14 @@
 		red: 0,
 		green: 0,
 		blue: 0,
-		alpha: 0,
+		alpha: 1,
 
 		init: function(){
 			this.listener();
 		},
 
 		listener: function(){
-			$("input").on("input", this.inputRed.bind(this));
+			$("#red").on("input", this.inputRed.bind(this));
 			$("#green").on("input", this.inputGreen.bind(this));
 			$("#blue").on("input", this.inputBlue.bind(this));
 			$("#alpha").on("input", this.inputAlpha.bind(this));
@@ -42,7 +42,7 @@
 		},
 
 		bodyColor: function(){
-			$("body").css("background-color", "rgb("+app.red+", "+app.green+", "+app.blue+", "+app.alpha+")");
+			$("body").css("background-color", "rgba("+app.red+", "+app.green+", "+app.blue+", "+app.alpha+")");
 		}
 	}
 
