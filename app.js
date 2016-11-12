@@ -8,8 +8,10 @@
 
 		init: function(){
 			this.listener();
+			this.bodyColor();
 		},
 
+		//Click des inputs range
 		listener: function(){
 			$("#red").on("input", this.inputRed.bind(this));
 			$("#green").on("input", this.inputGreen.bind(this));
@@ -43,6 +45,11 @@
 
 		bodyColor: function(){
 			$("body").css("background-color", "rgba("+app.red+", "+app.green+", "+app.blue+", "+app.alpha+")");
+			$("#hexa").text(this.hexaColor.bind(this));
+		},
+
+		hexaColor: function(){
+		    return "#" + ((1 << 24) + (app.red << 16) + (app.green << 8) + (app.blue << 0)).toString(16).slice(1);
 		}
 	}
 

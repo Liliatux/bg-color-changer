@@ -1,3 +1,8 @@
+.enTete {
+	text-align: center;
+	color: white;
+}
+
 .range {
 	margin: 100px auto;
 	width: 600px;
@@ -6,16 +11,4 @@
 
 input {
 	width: 90%;
-}
-
-#red {
-	color: rgb(255, 0, 0);
-}
-
-#green {
-	color: rgb(0, 255, 0);
-}
-
-#blue {
-	color: rgb(0, 0, 255);
 }

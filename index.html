@@ -6,18 +6,23 @@
 	<title>bg-color-changer</title>
 </head>
 <body>
+	<div class="enTete">
+		<h1>Project bg-color-changer</h1>
+		<span id="hexa"></span>
+	</div>
+
 	<div class="range">
-		<label for="red" id="textRed">R</label>
-		<input type="range" id="red" name="red" min="0" max="255" step="5" value="0">
+		<label for="red">r</label>
+		<input type="range" id="red" name="red" min="0" max="255" step="5" value="0"><span id="textRed"></span>
 		<br>
-		<label for="green" id="textGreen">G</label>
-		<input type="range" id="green" name="green" min="0" max="255" step="5" value="0">
+		<label for="green">g</label>
+		<input type="range" id="green" name="green" min="0" max="255" step="5" value="0"><span id="textGreen"></span>
 		<br>
-		<label for="blue" id="textBlue">B</label>
-		<input type="range" id="blue" name="blue" min="0" max="255" step="5" value="0">
+		<label for="blue">b</label>
+		<input type="range" id="blue" name="blue" min="0" max="255" step="5" value="0"><span id="textBlue"></span>
 		<br>
-		<label for="alpha" id="textAlpha">A</label>
-		<input type="range" id="alpha" name="alpha" min="0.0" max="1.0" step="0.01" value="0.0">
+		<label for="alpha">a</label>
+		<input type="range" id="alpha" name="alpha" min="0.0" max="1.0" step="0.01" value="1"><span id="textAlpha"></span>
 	</div>
 
 	<script src="node_modules/jquery/dist/jquery.min.js"></script>
